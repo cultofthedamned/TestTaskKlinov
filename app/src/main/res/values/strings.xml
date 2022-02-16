@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TestTaskKlinov</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="try_again">Try Again</string>
 </resources>
