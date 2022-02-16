@@ -54,8 +54,11 @@ class MainActivity : AppCompatActivity(), gifAdapter.onItemClickListener {
                     val builder_dialog = AlertDialog.Builder(this@MainActivity)
                     builder_dialog.setTitle("Error")
                     builder_dialog.setMessage("Response failed")
-                    builder_dialog.setPositiveButton("OK") { dialogInterface, which ->
+                    builder_dialog.setNegativeButton("OK") { dialogInterface, which ->
 
+                    }
+                    builder_dialog.setPositiveButton("TRY AGAIN") { dialogInterface, which ->
+                        setData()
                     }
                     val alertDialog: AlertDialog = builder_dialog.create()
                     alertDialog.setCancelable(false)
@@ -84,5 +87,4 @@ class MainActivity : AppCompatActivity(), gifAdapter.onItemClickListener {
         intent.putExtra("image", dataListMain[position]._images._originalImage.url)
         startActivity(intent)
     }
-
 }
